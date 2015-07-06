@@ -13,6 +13,6 @@ exports.answer = function(req, res) {
 };
 
 // GET /author
-exports.question = function(req, res) {
+exports.author = function(req, res) {
 	res.render('author');
 };
