@@ -1,0 +1,101 @@
+2015-07-12T18:22:49.656493+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2015-07-12T18:22:49.656495+00:00 app[web.1]:     at require (module.js:380:17)
+2015-07-12T18:22:49.656496+00:00 app[web.1]:     at Object.<anonymous> (/app/routes/index.js:4:22)
+2015-07-12T18:22:50.525585+00:00 heroku[web.1]: Process exited with status 8
+2015-07-12T18:22:50.543649+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-12T18:23:22.140546+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quiz-jtb.herokuapp.com request_id=01bd0c29-b500-4638-afc6-113d83ae5897 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:23:22.909582+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=quiz-jtb.herokuapp.com request_id=8f3b845f-6163-4149-a6ae-32098f4ceedc fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:24:02.607140+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quiz-jtb.herokuapp.com request_id=f56dbf08-91db-4e21-8bd7-4eedc495ba63 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:38:41.491636+00:00 heroku[api]: Deploy 40b64aa by jt.benjumea@gmail.com
+2015-07-12T18:38:41.491636+00:00 heroku[api]: Release v12 created by jt.benjumea@gmail.com
+2015-07-12T18:38:41.536848+00:00 heroku[slug-compiler]: Slug compilation started
+2015-07-12T18:38:41.536864+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-07-12T18:38:42.038438+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-12T18:38:43.711883+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
+2015-07-12T18:38:45.456907+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-07-12T18:38:45.456932+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-07-12T18:38:46.061515+00:00 app[web.1]: 
+2015-07-12T18:38:46.061812+00:00 app[web.1]:     throw err;
+2015-07-12T18:38:46.061830+00:00 app[web.1]:           ^
+2015-07-12T18:38:46.061567+00:00 app[web.1]: module.js:340
+2015-07-12T18:38:46.062509+00:00 app[web.1]: Error: Cannot find module './.env'
+2015-07-12T18:38:46.062512+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:338:15)
+2015-07-12T18:38:46.062514+00:00 app[web.1]:     at Function.Module._load (module.js:280:25)
+2015-07-12T18:38:46.062516+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2015-07-12T18:38:46.062517+00:00 app[web.1]:     at require (module.js:380:17)
+2015-07-12T18:38:46.062519+00:00 app[web.1]:     at Object.<anonymous> (/app/app.js:10:14)
+2015-07-12T18:38:46.062521+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2015-07-12T18:38:46.062522+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2015-07-12T18:38:46.062524+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2015-07-12T18:38:46.062526+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2015-07-12T18:38:46.062529+00:00 app[web.1]:     at require (module.js:380:17)
+2015-07-12T18:38:46.062527+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2015-07-12T18:38:46.062530+00:00 app[web.1]:     at Object.<anonymous> (/app/bin/www:3:11)
+2015-07-12T18:38:46.062532+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2015-07-12T18:38:46.062534+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2015-07-12T18:38:46.062533+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2015-07-12T18:38:46.062536+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2015-07-12T18:38:46.885056+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-12T18:38:46.886039+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-12T18:38:46.872214+00:00 heroku[web.1]: Process exited with status 8
+2015-07-12T18:38:48.376717+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
+2015-07-12T18:38:49.552492+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-07-12T18:38:49.552508+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-07-12T18:38:50.038329+00:00 app[web.1]: 
+2015-07-12T18:38:50.038641+00:00 app[web.1]:           ^
+2015-07-12T18:38:50.038635+00:00 app[web.1]:     throw err;
+2015-07-12T18:38:50.038385+00:00 app[web.1]: module.js:340
+2015-07-12T18:38:50.039217+00:00 app[web.1]:     at Function.Module._load (module.js:280:25)
+2015-07-12T18:38:50.039216+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:338:15)
+2015-07-12T18:38:50.039214+00:00 app[web.1]: Error: Cannot find module './.env'
+2015-07-12T18:38:50.039223+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2015-07-12T18:38:50.039220+00:00 app[web.1]:     at require (module.js:380:17)
+2015-07-12T18:38:50.039218+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2015-07-12T18:38:50.039221+00:00 app[web.1]:     at Object.<anonymous> (/app/app.js:10:14)
+2015-07-12T18:38:50.039222+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2015-07-12T18:38:50.039227+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2015-07-12T18:38:50.039225+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2015-07-12T18:38:50.039224+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2015-07-12T18:38:50.039229+00:00 app[web.1]:     at Object.<anonymous> (/app/bin/www:3:11)
+2015-07-12T18:38:50.039231+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2015-07-12T18:38:50.039230+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2015-07-12T18:38:50.039228+00:00 app[web.1]:     at require (module.js:380:17)
+2015-07-12T18:38:50.039232+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2015-07-12T18:38:50.039233+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2015-07-12T18:38:50.781720+00:00 heroku[web.1]: Process exited with status 8
+2015-07-12T18:38:50.797613+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-12T18:39:15.709441+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quiz-jtb.herokuapp.com request_id=63959b4f-6fcf-4218-81d8-69711030d4d7 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:39:16.130414+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=quiz-jtb.herokuapp.com request_id=3e9edb53-7933-4125-955a-860af4ccc358 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:39:18.740191+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quiz-jtb.herokuapp.com request_id=678111b3-41bf-4674-9da9-550894d9ea93 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:39:19.214415+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=quiz-jtb.herokuapp.com request_id=322e962e-0d24-4bd3-9087-853b6f28820d fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:39:19.773553+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quiz-jtb.herokuapp.com request_id=57b680b3-3edd-4c77-aa4a-bbb9dca7b131 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:39:20.541980+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=quiz-jtb.herokuapp.com request_id=8e6ab70d-06f2-40ad-b6e5-4d8628622dea fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:41:23.332323+00:00 heroku[web.1]: State changed from crashed to starting
+2015-07-12T18:41:25.425123+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
+2015-07-12T18:41:27.470466+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-07-12T18:41:27.470488+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-07-12T18:41:28.829898+00:00 app[web.1]: 
+2015-07-12T18:41:28.830481+00:00 app[web.1]:     throw err;
+2015-07-12T18:41:28.830036+00:00 app[web.1]: module.js:340
+2015-07-12T18:41:28.831444+00:00 app[web.1]: Error: Cannot find module './.env'
+2015-07-12T18:41:28.830698+00:00 app[web.1]:           ^
+2015-07-12T18:41:28.831446+00:00 app[web.1]:     at Function.Module._resolveFilename (module.js:338:15)
+2015-07-12T18:41:28.831448+00:00 app[web.1]:     at Function.Module._load (module.js:280:25)
+2015-07-12T18:41:28.831449+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2015-07-12T18:41:28.831451+00:00 app[web.1]:     at require (module.js:380:17)
+2015-07-12T18:41:28.831452+00:00 app[web.1]:     at Object.<anonymous> (/app/app.js:10:14)
+2015-07-12T18:41:28.831453+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2015-07-12T18:41:28.831455+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2015-07-12T18:41:28.831456+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2015-07-12T18:41:28.831458+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2015-07-12T18:41:28.831462+00:00 app[web.1]:     at Object.<anonymous> (/app/bin/www:3:11)
+2015-07-12T18:41:28.831460+00:00 app[web.1]:     at require (module.js:380:17)
+2015-07-12T18:41:28.831459+00:00 app[web.1]:     at Module.require (module.js:364:17)
+2015-07-12T18:41:28.831463+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2015-07-12T18:41:28.831464+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2015-07-12T18:41:28.831467+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2015-07-12T18:41:28.831465+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2015-07-12T18:41:29.809317+00:00 heroku[web.1]: State changed from starting to crashed
+2015-07-12T18:41:29.794200+00:00 heroku[web.1]: Process exited with status 8
+2015-07-12T18:41:35.159679+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quiz-jtb.herokuapp.com request_id=b381f721-f258-47da-bf1c-efe50c9f0824 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
+2015-07-12T18:41:35.669124+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=quiz-jtb.herokuapp.com request_id=35929649-ab7c-4703-bc44-1593a8a52042 fwd="85.59.16.37" dyno= connect= service= status=503 bytes=
