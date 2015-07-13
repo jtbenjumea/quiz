@@ -2,9 +2,9 @@
 
 // Postgres DATABASE_URL = postgres://user:passwd@host:port/database
 // SQLite   DATABASE_URL = sqlite://:@:/
-//process.env.DATABASE_URL='sqlite://:@:/';
+process.env.DATABASE_URL='sqlite://:@:/';
 //process.env.DATABASE_STORAGE='quiz.sqlite';
-process.env.DATABASE_URL='postgres://betkhkquxyaxxy:IxXEXAF6PSBdrKi9cWYH2G2X-C@ec2-54-225-134-223.compute-1.amazonaws.com:5432/d5kc4u2ovrk6rn';
+//process.env.DATABASE_URL='postgres://betkhkquxyaxxy:IxXEXAF6PSBdrKi9cWYH2G2X-C@ec2-54-225-134-223.compute-1.amazonaws.com:5432/d5kc4u2ovrk6rn';
 process.env.DATABASE_STORAGE='quiz.sqlite';
 var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
 var DB_name  = (url[6]||null);
@@ -41,9 +41,12 @@ sequelize.sync().then(function() {
   // success(..) ejecuta el manejador una vez creada la tabla
 	Quiz.count().then(function (count){
 	  if(count === 0) {   // la tabla se inicializa solo si está vacía
-		Quiz.create({pregunta: '¿Capital de Italia?',   
+		Quiz.create({pregunta: 'Capital de Italia',   
 					respuesta: 'Roma'
-					}) // 
+					});
+		Quiz.create({pregunta: 'Capital de Italia',   
+					respuesta: 'Lisboa'
+					})					
 		.then(function(){console.log('Base de datos inicializada')});
 	  };
 	});
