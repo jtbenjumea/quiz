@@ -2,8 +2,8 @@
 
 // Postgres DATABASE_URL = postgres://user:passwd@host:port/database
 // SQLite   DATABASE_URL = sqlite://:@:/
-//process.env.DATABASE_URL='sqlite://:@:/';
-process.env.DATABASE_URL='postgres://betkhkquxyaxxy:IxXEXAF6PSBdrKi9cWYH2G2X-C@ec2-54-225-134-223.compute-1.amazonaws.com:5432/d5kc4u2ovrk6rn';
+process.env.DATABASE_URL='sqlite://:@:/';
+//process.env.DATABASE_URL='postgres://betkhkquxyaxxy:IxXEXAF6PSBdrKi9cWYH2G2X-C@ec2-54-225-134-223.compute-1.amazonaws.com:5432/d5kc4u2ovrk6rn';
 process.env.DATABASE_STORAGE='quiz.sqlite';
 var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
 var DB_name  = (url[6]||null);
@@ -32,8 +32,16 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 // Importar definicion de la tabla Quiz
 var Quiz = sequelize.import(path.join(__dirname, 'quiz'));
 
+// Importar definicion de la tabla Comment
+var comment_path = path.join(__dirname, 'comment');
+var Comment = sequelize.import(comment_path);
+
+Comment.belongsTo(Quiz);
+Quiz.hasMany(Comment);
+
 // exportar tablas
 exports.Quiz = Quiz; 
+exports.Comment = Comment;
 
 // sequelize.sync() inicializa tabla de preguntas en DB
 sequelize.sync().then(function() {
