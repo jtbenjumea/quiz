@@ -28,6 +28,7 @@ app.use(cookieParser('Quiz 2015'));
 app.use(session());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(sessionTimeOut);   // Middleware para controlar time out usuario logueados
 
 // Helpers dinámicos
 app.use(function(req, res, next) {
@@ -41,6 +42,28 @@ app.use(function(req, res, next) {
 	next();
 });
 
+// Time Out usuarios logueados
+function sessionTimeOut(req, res, next) {
+	// Comprobamos que el usuario está logueado
+	if (req.session.user) {
+		var now = (new Date()).getTime(); 
+
+		// Comprobamos que no haya estado 2 minutos sin hacer nada
+		if (req.session.user.lastime) {
+			var lastdate = req.session.user.lastime; 
+			var twoMinutesLater = new Date(req.session.user.lastime + (2 * 60 * 1000));
+					
+			if (twoMinutesLater < now) {
+				delete req.session.user;				
+			} 
+		} 
+	}
+	// Si el usuario sigue estando logueado registramos último acceso
+	if 	(req.session.user) {
+		req.session.user.lastime = now;
+	}
+	next();
+};
 
 app.use('/', routes);
 

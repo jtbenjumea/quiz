@@ -33,6 +33,9 @@ exports.create = function(req, res) {
 		req.session.user = {id: user.id, username: user.username};
 		
 		res.redirect(req.session.redir.toString()); // redireccion a path anterior a login
+		
+		// Grabamos el moment de logearse
+		req.session.user.lastime = (new Date()).getTime();
 	});	
 };
 
